@@ -6,8 +6,8 @@ class Swiftwui < Formula
   license "MIT"
   head "https://github.com/kazi05/swiftwui.git", branch: "main"
 
-  depends_on macos: :sonoma            # Package.swift: .macOS(.v14)
   depends_on xcode: ["26.0", :build]   # needs Swift >= 6.2
+  depends_on macos: :sonoma            # Package.swift: .macOS(.v14)
 
   def install
     # --disable-sandbox: SwiftPM's own sandbox cannot nest inside Homebrew's
