@@ -10,7 +10,9 @@ class Swiftwui < Formula
   depends_on xcode: ["26.0", :build]   # needs Swift >= 6.2
 
   def install
-    system "swift", "build", "-c", "release", "--product", "swiftwui"
+    # --disable-sandbox: SwiftPM's own sandbox cannot nest inside Homebrew's
+    # build sandbox (sandbox_apply fails); brew's outer sandbox still applies.
+    system "swift", "build", "--disable-sandbox", "-c", "release", "--product", "swiftwui"
     libexec.install ".build/release/swiftwui",
                     ".build/release/SwiftWUI_SwiftWUIToolchain.bundle"
     # Exec script, not a symlink: the CLI locates its resource bundle via
