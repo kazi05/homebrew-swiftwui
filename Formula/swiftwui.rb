@@ -1,8 +1,8 @@
 class Swiftwui < Formula
   desc "CLI for SwiftWUI - SwiftUI-inspired web framework compiled to WebAssembly"
   homepage "https://github.com/kazi05/swiftwui"
-  url "https://github.com/kazi05/swiftwui/archive/refs/tags/v0.9.2.tar.gz"
-  sha256 "bf2d35f93c2bd0e0fbef4f4e2a325b2c060b2cefd1c59e218cb723ebd1052b71"
+  url "https://github.com/kazi05/swiftwui/archive/refs/tags/v0.10.0.tar.gz"
+  sha256 "d574e4b5d756dbf7fe42a3266c7fbfc70ce5aaaaae62cd8f71fb4daa57220560"
   license "MIT"
   head "https://github.com/kazi05/swiftwui.git", branch: "main"
 
