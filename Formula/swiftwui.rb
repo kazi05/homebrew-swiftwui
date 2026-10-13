@@ -1,8 +1,8 @@
 class Swiftwui < Formula
   desc "CLI for SwiftWUI - SwiftUI-inspired web framework compiled to WebAssembly"
   homepage "https://github.com/kazi05/swiftwui"
-  url "https://github.com/kazi05/swiftwui/archive/refs/tags/v0.10.0.tar.gz"
-  sha256 "d574e4b5d756dbf7fe42a3266c7fbfc70ce5aaaaae62cd8f71fb4daa57220560"
+  url "https://github.com/kazi05/swiftwui/archive/refs/tags/v0.11.0.tar.gz"
+  sha256 "6f8eba5bbba06b60d75cc1255f20c1a7de3a16643933fdbb9c8cac4d80a87bed"
   license "MIT"
   head "https://github.com/kazi05/swiftwui.git", branch: "main"
 
@@ -22,10 +22,11 @@ class Swiftwui < Formula
 
   def caveats
     <<~EOS
-      Building SwiftWUI apps additionally requires the Swift 6.3.3 toolchain
-      and the matching WASM SDK (versions must match exactly):
-        swiftly install 6.3.3 && swiftly use 6.3.3
-        swift sdk install <swift-6.3.3-RELEASE_wasm bundle URL from swift.org/download>
+      Building SwiftWUI apps additionally requires the Swift.org 6.4.0 toolchain
+      and the matching WASM SDK (versions must match exactly; Xcode's swift
+      cannot build for WebAssembly):
+        swiftly install 6.4.0 && swiftly use 6.4.0
+        swift sdk install <swift-6.4.0-RELEASE_wasm bundle URL from swift.org/download>
     EOS
   end
 
